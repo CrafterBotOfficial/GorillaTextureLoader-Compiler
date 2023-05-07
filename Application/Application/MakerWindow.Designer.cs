@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerWindow));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isverfiedbtn = new System.Windows.Forms.CheckBox();
             this.title = new System.Windows.Forms.TextBox();
             this.compilebtn = new System.Windows.Forms.Button();
             this.description = new System.Windows.Forms.RichTextBox();
@@ -41,12 +42,15 @@
             this.secondaryatlas = new System.Windows.Forms.Label();
             this.savebtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.leaf = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.forestatlaspriview = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.isverfiedbtn = new System.Windows.Forms.CheckBox();
+            this.useleaf = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.forestatlaspriview)).BeginInit();
@@ -56,6 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.useleaf);
             this.panel1.Controls.Add(this.isverfiedbtn);
             this.panel1.Controls.Add(this.title);
             this.panel1.Controls.Add(this.compilebtn);
@@ -68,6 +73,17 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(51000);
             this.panel1.Size = new System.Drawing.Size(220, 426);
             this.panel1.TabIndex = 0;
+            // 
+            // isverfiedbtn
+            // 
+            this.isverfiedbtn.AutoSize = true;
+            this.isverfiedbtn.Location = new System.Drawing.Point(19, 368);
+            this.isverfiedbtn.Name = "isverfiedbtn";
+            this.isverfiedbtn.Size = new System.Drawing.Size(72, 17);
+            this.isverfiedbtn.TabIndex = 9;
+            this.isverfiedbtn.Text = "Is Verified";
+            this.isverfiedbtn.UseVisualStyleBackColor = true;
+            this.isverfiedbtn.CheckedChanged += new System.EventHandler(this.isverfiedbtn_CheckedChanged);
             // 
             // title
             // 
@@ -173,6 +189,27 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Tree Room";
             // 
+            // leaf
+            // 
+            this.leaf.AutoSize = true;
+            this.leaf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.leaf.Location = new System.Drawing.Point(397, 62);
+            this.leaf.Name = "leaf";
+            this.leaf.Size = new System.Drawing.Size(42, 20);
+            this.leaf.TabIndex = 12;
+            this.leaf.Text = "Leaf";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Application.Properties.Resources.cherryblossomsmall;
+            this.pictureBox4.InitialImage = global::Application.Properties.Resources.forestatlas;
+            this.pictureBox4.Location = new System.Drawing.Point(355, 85);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(123, 97);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Application.Properties.Resources.treeroomatlas;
@@ -216,15 +253,15 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // isverfiedbtn
+            // useleaf
             // 
-            this.isverfiedbtn.AutoSize = true;
-            this.isverfiedbtn.Location = new System.Drawing.Point(19, 368);
-            this.isverfiedbtn.Name = "isverfiedbtn";
-            this.isverfiedbtn.Size = new System.Drawing.Size(72, 17);
-            this.isverfiedbtn.TabIndex = 9;
-            this.isverfiedbtn.Text = "Is Verified";
-            this.isverfiedbtn.UseVisualStyleBackColor = true;
+            this.useleaf.AutoSize = true;
+            this.useleaf.Location = new System.Drawing.Point(137, 368);
+            this.useleaf.Name = "useleaf";
+            this.useleaf.Size = new System.Drawing.Size(80, 17);
+            this.useleaf.TabIndex = 10;
+            this.useleaf.Text = "Export Leaf";
+            this.useleaf.UseVisualStyleBackColor = true;
             // 
             // MakerWindow
             // 
@@ -232,6 +269,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.leaf);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.savebtn);
@@ -247,6 +286,7 @@
             this.Text = "Texture Compiler";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.forestatlaspriview)).EndInit();
@@ -275,5 +315,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.CheckBox isverfiedbtn;
+        private System.Windows.Forms.Label leaf;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.CheckBox useleaf;
     }
 }

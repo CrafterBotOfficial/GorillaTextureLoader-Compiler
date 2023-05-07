@@ -25,8 +25,19 @@ namespace App
             pictureBox2.Click += PictureBox2_Click;
             pictureBox3.Click += PictureBox3_Click;
             isverfiedbtn.Click += Isverfiedbtn_Click;
+            pictureBox4.Click += Leaf_Click;
 
             compilebtn.Click += Compilebtn_Click;
+        }
+
+        private void Leaf_Click(object sender, EventArgs e)
+        {
+            string path = GetFile();
+            if (path != null)
+            {
+                pictureBox4.ImageLocation = path;
+                GetProject.Leaf = path;
+            }
         }
 
         private void Isverfiedbtn_Click(object sender, EventArgs e)
@@ -57,6 +68,8 @@ namespace App
             File.Copy(GetProject.MainAtlas, TEMPDirectory + "/atlas.png");
             File.Copy(GetProject.StumpAtlas, TEMPDirectory + "/treestump.png");
             File.Copy(GetProject.StumpRoom, TEMPDirectory + "/treestumproom.png");
+            if (useleaf.Checked)
+                File.Copy(GetProject.Leaf, TEMPDirectory + "/leaf.png");
 
             string ZIPPath = path + GetProject.Name + ".texture";
             if (File.Exists(ZIPPath))
@@ -182,6 +195,11 @@ namespace App
             }
             return null;
         }
+
+        private void isverfiedbtn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     [Serializable]
@@ -194,6 +212,7 @@ namespace App
         public string MainAtlas;
         public string StumpAtlas;
         public string StumpRoom;
+        public string Leaf;
 
         public string DeveloperToken;
 
@@ -205,6 +224,7 @@ namespace App
             MainAtlas = "";
             StumpAtlas = "";
             StumpRoom = "";
+            Leaf = "";
         }
     }
 }
