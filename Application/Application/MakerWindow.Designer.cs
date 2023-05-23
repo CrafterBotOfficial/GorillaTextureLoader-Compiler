@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerWindow));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.useleaf = new System.Windows.Forms.CheckBox();
             this.isverfiedbtn = new System.Windows.Forms.CheckBox();
             this.title = new System.Windows.Forms.TextBox();
             this.compilebtn = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.forestatlaspriview = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.useleaf = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -74,6 +74,16 @@
             this.panel1.Size = new System.Drawing.Size(220, 426);
             this.panel1.TabIndex = 0;
             // 
+            // useleaf
+            // 
+            this.useleaf.AutoSize = true;
+            this.useleaf.Location = new System.Drawing.Point(137, 368);
+            this.useleaf.Name = "useleaf";
+            this.useleaf.Size = new System.Drawing.Size(80, 17);
+            this.useleaf.TabIndex = 10;
+            this.useleaf.Text = "Export Leaf";
+            this.useleaf.UseVisualStyleBackColor = true;
+            // 
             // isverfiedbtn
             // 
             this.isverfiedbtn.AutoSize = true;
@@ -83,6 +93,7 @@
             this.isverfiedbtn.TabIndex = 9;
             this.isverfiedbtn.Text = "Is Verified";
             this.isverfiedbtn.UseVisualStyleBackColor = true;
+            this.isverfiedbtn.Visible = false;
             this.isverfiedbtn.CheckedChanged += new System.EventHandler(this.isverfiedbtn_CheckedChanged);
             // 
             // title
@@ -252,16 +263,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // useleaf
-            // 
-            this.useleaf.AutoSize = true;
-            this.useleaf.Location = new System.Drawing.Point(137, 368);
-            this.useleaf.Name = "useleaf";
-            this.useleaf.Size = new System.Drawing.Size(80, 17);
-            this.useleaf.TabIndex = 10;
-            this.useleaf.Text = "Export Leaf";
-            this.useleaf.UseVisualStyleBackColor = true;
             // 
             // MakerWindow
             // 
