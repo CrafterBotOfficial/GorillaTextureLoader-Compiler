@@ -24,7 +24,6 @@ namespace App
             forestatlaspriview.Click += Forestatlaspriview_Click;
             pictureBox2.Click += PictureBox2_Click;
             pictureBox3.Click += PictureBox3_Click;
-            isverfiedbtn.Click += Isverfiedbtn_Click;
             pictureBox4.Click += Leaf_Click;
 
             compilebtn.Click += Compilebtn_Click;
@@ -40,16 +39,6 @@ namespace App
             }
         }
 
-        private void Isverfiedbtn_Click(object sender, EventArgs e)
-        {
-            if (GetProject.DeveloperToken != "IWouldHideThisButIamLazy since most people here are 5 it will probably be fine.")
-            {
-                MessageBox.Show("Invalid Input", "You are not a verified developer.", MessageBoxButtons.OK);
-                isverfiedbtn.Checked = false;
-                return;
-            }
-        }
-
         private void Compilebtn_Click(object sender, EventArgs e)
         {
             SaveProject(false);
@@ -61,7 +50,7 @@ namespace App
 
             string path = GetDirectory();
 
-            Package package = new Package(GetProject.Name, GetProject.Description, isverfiedbtn.Checked);
+            Package package = new Package(GetProject.Name, GetProject.Description, false);
             string json = JsonConvert.SerializeObject(package);
             File.WriteAllText(TEMPDirectory + "/package.json", json);
             File.Copy(GetProject.Ground, TEMPDirectory + "/ground.png");
@@ -213,8 +202,6 @@ namespace App
         public string StumpAtlas;
         public string StumpRoom;
         public string Leaf;
-
-        public string DeveloperToken;
 
         public MakerProject()
         {
