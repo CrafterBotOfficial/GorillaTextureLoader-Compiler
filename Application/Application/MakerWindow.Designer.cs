@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakerWindow));
             this.panel1 = new System.Windows.Forms.Panel();
             this.useleaf = new System.Windows.Forms.CheckBox();
-            this.isverfiedbtn = new System.Windows.Forms.CheckBox();
             this.title = new System.Windows.Forms.TextBox();
             this.compilebtn = new System.Windows.Forms.Button();
             this.description = new System.Windows.Forms.RichTextBox();
@@ -61,7 +60,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.useleaf);
-            this.panel1.Controls.Add(this.isverfiedbtn);
             this.panel1.Controls.Add(this.title);
             this.panel1.Controls.Add(this.compilebtn);
             this.panel1.Controls.Add(this.description);
@@ -83,18 +81,6 @@
             this.useleaf.TabIndex = 10;
             this.useleaf.Text = "Export Leaf";
             this.useleaf.UseVisualStyleBackColor = true;
-            // 
-            // isverfiedbtn
-            // 
-            this.isverfiedbtn.AutoSize = true;
-            this.isverfiedbtn.Location = new System.Drawing.Point(19, 368);
-            this.isverfiedbtn.Name = "isverfiedbtn";
-            this.isverfiedbtn.Size = new System.Drawing.Size(72, 17);
-            this.isverfiedbtn.TabIndex = 9;
-            this.isverfiedbtn.Text = "Is Verified";
-            this.isverfiedbtn.UseVisualStyleBackColor = true;
-            this.isverfiedbtn.Visible = false;
-            this.isverfiedbtn.CheckedChanged += new System.EventHandler(this.isverfiedbtn_CheckedChanged);
             // 
             // title
             // 
@@ -315,7 +301,6 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.CheckBox isverfiedbtn;
         private System.Windows.Forms.Label leaf;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.CheckBox useleaf;
